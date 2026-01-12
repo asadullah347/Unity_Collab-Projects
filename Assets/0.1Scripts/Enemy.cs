@@ -18,11 +18,10 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("Fist"))
         {
             collided = true;
-            Debug.Log(name + "collided");
-
+            Destroy(gameObject);
         }
     }
     private void OnTriggerExit(Collider other)
