@@ -5,9 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Asad.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainLobby.unity
+    guid: c8135ac78c495e448b8710763248691c
+  - enabled: 1
+    path: Assets/Scenes/Flappy Bird.unity
+    guid: b412952294f9fac4ba88ad45558265af
+  - enabled: 1
+    path: Assets/Scenes/Game 1.unity
+    guid: 75fa354781e1ae84b97d89beba1e80c4
+  - enabled: 1
+    path: Assets/Scenes/New Scene.unity
+    guid: 37d2b0b6a5eb0d04aa432104a4a45693
+  - enabled: 1
+    path: Assets/Scenes/Prototype.unity
+    guid: f0157b03055ae5e4a91a19e5e2d21d88
+  - enabled: 1
+    path: Assets/Scenes/Temp.unity
+    guid: 9eade7c174e59534fb681b9fc0b99989
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
