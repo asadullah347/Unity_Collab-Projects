@@ -4,7 +4,7 @@ public class HealthPack : MonoBehaviour
 {
     CharacterControll player;
 
-    private float increaseHealth = 10;
+    [SerializeField] float increaseHealth = 10;
 
 
     void Start()
@@ -17,13 +17,22 @@ public class HealthPack : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Heal(increaseHealth);
+        }
+    }
+
+    void Heal(float healthIncrease)
     {
         if (player._Hp < 100)
         {
-            player._Hp += increaseHealth;
+            player._Hp += healthIncrease;
+            Destroy(gameObject);
         }
-        
     }
 
 }
