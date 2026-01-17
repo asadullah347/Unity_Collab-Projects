@@ -4,7 +4,7 @@ public class Zombie : MonoBehaviour
 {
     CharacterControll player;
     
-    private float speed = 4;
+    private float speed = 3;
 
     //public Vector3 velocity = new Vector3(0,0,0);
 
