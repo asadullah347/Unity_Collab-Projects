@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public bool collided = false;
     void Start()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<CharacterControll>();
+        player = GameObject.FindWithTag("player").GetComponent<CharacterControll>();
         _enemyHp = 100;
     }
 

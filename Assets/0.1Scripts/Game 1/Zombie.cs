@@ -6,7 +6,7 @@ public class Zombie : MonoBehaviour
     Rigidbody zombieRB;
     private float speed = 6;
 
-    public Vector3 velocity = new Vector3(0,0,0);
+    //public Vector3 velocity = new Vector3(0,0,0);
 
     private void Start()
     {
@@ -23,11 +23,8 @@ public class Zombie : MonoBehaviour
     {
         Vector3 dir = (player.transform.position - transform.position).normalized; // direction to player
 
-        velocity.x = Mathf.Min(speed, velocity.x + 0.1f);
-        velocity.z = Mathf.Min(speed, velocity.z + 0.1f);
 
-
-        zombieRB.MovePosition(transform.position + Vector3.Scale(dir, velocity) * Time.deltaTime);
+        zombieRB.MovePosition(transform.position + dir * speed * Time.deltaTime);
     }
 
    

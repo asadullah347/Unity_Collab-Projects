@@ -1173,6 +1173,7 @@ GameObject:
   - component: {fileID: 1360174270}
   - component: {fileID: 1360174271}
   - component: {fileID: 1360174272}
+  - component: {fileID: 1360174273}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -1208,7 +1209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6208ab8bb735fb14aa1c45c49df89e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Zombie
-  velocity: {x: 0, y: 0, z: 0}
 --- !u!54 &1360174271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.5431042, z: 0.5925349}
   m_Center: {x: 0, y: 0.22557741, z: -0.17913419}
+--- !u!114 &1360174273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360174268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6208ab8bb735fb14aa1c45c49df89e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Zombie
 --- !u!1 &1439101392
 GameObject:
   m_ObjectHideFlags: 0
