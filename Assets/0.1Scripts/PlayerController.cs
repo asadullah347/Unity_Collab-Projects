@@ -7,9 +7,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRB;
 
     public float _speed = 0;
+    public float _hp = 100;
     public float jumpF = 5;
     public float dmg = 10;
 
+    bool enemyColided = false;
 
     [SerializeField] bool isGrounded;
 
@@ -34,16 +36,10 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-        if(enemy.collided )
-        {
-            Debug.Log(enemy.name);
-        }
-
-        /* //Punch()
         if (Input.GetKeyDown(KeyCode.E) && enemy.collided)
         {
             Punch();
-        } */
+        } 
 }
 
     void GroundMovement()
@@ -71,5 +67,23 @@ public class PlayerController : MonoBehaviour
     {
         // playerRB.AddForce(0, jumpF, 0, ForceMode.Impulse);
         playerRB.linearVelocity = new Vector3(0, jumpF, 0);
+    }
+
+
+    void GetDamage(int damageinTake)
+    {
+        if(enemyColided)
+        {
+            _hp -= damageinTake;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            enemyColided = true;
+            GetDamage(20);
+        }
     }
 }

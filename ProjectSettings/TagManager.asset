@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
-  - Fist
+  - Punch
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -34,6 +34,8 @@ public class Zombie : MonoBehaviour
         transform.position += dir * speed * Time.deltaTime;
     }
 
+
+
     //make functions for behaviour
     void MoveRandom() { 
     
@@ -43,9 +45,5 @@ public class Zombie : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(Random_direction);
         transform.position += Random_direction * 4 * Time.deltaTime;
 
-
-       
-        
     }
-   
 }

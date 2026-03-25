@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 470243036}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   _enemyHp: 100
+  hit: 0
   collided: 0
 --- !u!54 &470243036
 Rigidbody:
@@ -533,11 +534,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 36
+  m_CollisionDetection: 1
 --- !u!1 &674905641
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,9 +696,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   enemy: {fileID: 470243035}
-  fist: {fileID: 1429768617}
   _speed: 5
+  _hp: 100
   jumpF: 5
+  dmg: 10
   isGrounded: 0
 --- !u!1 &832575517
 GameObject:

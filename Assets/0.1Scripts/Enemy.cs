@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Fist"))
+        if (other.gameObject.CompareTag("Punch"))
         {
             collided = true;
             Destroy(gameObject);
